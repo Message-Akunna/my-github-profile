@@ -1,7 +1,7 @@
 
 // authentication token
 const github_data = {
-    "token": "ce2b62bdc325060746363ed8e638728b62778fe3",
+    "token": "d71bc8a8379aa3aa053e5aef744375380e8f4443",
     "username": "Message-Akunna"
 };
 
