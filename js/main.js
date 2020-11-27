@@ -7,8 +7,32 @@ client.setHeader("Authorization", "bearer " + auth_token);
 
 var query = `
 query {
-  user {
-    login
+  user(login: "Message-Akunna") {
+    avatarUrl
+    name
+    email
+    bio
+    repositories(last: 20) {
+      nodes {
+        name
+        description
+        languages(first: 4) {
+          nodes {
+            color
+            name
+          }
+        }
+        forks {
+          totalCount
+        }
+        stargazers {
+          totalCount
+        }
+        homepageUrl
+        projectsUrl
+        updatedAt
+      }
+    }
   }
 }`;
 
