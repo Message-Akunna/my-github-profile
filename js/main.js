@@ -1,6 +1,9 @@
 // Create the client, specify the endpoint URL
 client = GraphQL.makeClient("https://api.github.com/graphql"); 
 
+// authentication token
+const auth_token = "d3bb1d48573c99e0e8318298e8b5c53e7a3f046e";
+
 // Set headers to be passed with each request
 // The GitHub API specifies authentication via the Authorization header
 client.setHeader("Authorization", "bearer " + auth_token);  
