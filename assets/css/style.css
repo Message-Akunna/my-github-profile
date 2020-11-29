@@ -43,6 +43,8 @@ body {
     background-color: var(--color-white);
     padding: 0px !important;
     margin: 0px !important;
+    height: 100%;
+    overflow-y: auto;
 }
 
 button,
@@ -91,7 +93,7 @@ h6 {
     margin-top: 0;
     margin-bottom: 0
 }
-h1 {
+h1, .f1{
     font-size: 2rem;
 }
 h1,
@@ -189,10 +191,23 @@ ul ol {
 .app-text-center{
     text-align: center !important;
 }
-
+.app-text-nowrap {
+    white-space: nowrap!important;
+}
+/* line height */
+/* .line-height{
+    
+} */
+/* font weight */
+.fw-300{
+    font-weight: 300 !important;
+}
+.fw-400{
+    font-weight: 400 !important;
+}
 /* float */
 .float-right {
-    float: right!important
+    float: right!important;
 }
 
 /* display */
@@ -220,6 +235,9 @@ ul ol {
 }
 .flex-justify-center {
     justify-content: center!important;
+}
+.flex-justify-start {
+    justify-content: start!important;
 }
 .flex-grow-1 {
     flex-grow: 1!important
@@ -353,8 +371,15 @@ ul ol {
     margin-left: .25rem!important
 }
 /* padding */
+.pt-4{
+    padding-top: 1.5rem !important;
+}
 .pb-1{
     padding-bottom: 0.5rem !important;
+}
+.py-1{
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
 }
 .py-3{
     padding-top: 1rem !important;
@@ -367,8 +392,15 @@ ul ol {
 .pr-4{
     padding-right: 1.5rem !important;
 }
+.px-4{
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+}
 
 @media (min-width: 768px){
+    .mt-md-3{
+        margin-top: 1rem !important;
+    }
     .mr-md-0{
         margin-right: 0!important;
     }
@@ -397,6 +429,9 @@ ul ol {
     .mb-md-3 {
         margin-bottom: 1rem!important
     }
+    .mt-md-n4{
+        margin-top: -2rem !important;
+    }
 }
 /* border */
 .border-bottom{
@@ -414,6 +449,9 @@ ul ol {
 }
 .bottom-0{
     bottom: 0!important;
+}
+.position-relative{
+    position: relative !important;
 }
 @media(min-width: 768px){
     .top-md-0 {
@@ -841,13 +879,14 @@ details:not([open])>:not(summary) {
 details.new-details{
     position: relative !important;
 }
+.status-container details.new-details[open] > summary:before,
 details.new-details[open] > summary:before {
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 80;
+    z-index: 98;
     display: block;
     cursor: default;
     content: " ";
@@ -859,6 +898,7 @@ details.new-details[open] > summary:before {
 .new-details>summary::-webkit-details-marker {
     display: none
 }
+.status-container details-menu.details-menu,
 details-menu.details-menu{
     position: fixed;
     top: 0;
@@ -871,6 +911,7 @@ details-menu.details-menu{
     pointer-events: none;
     flex-direction: column;
 }
+.status-container details-menu.details-menu:before,
 details-menu.details-menu:before {
     position: absolute;
     top: 0;
@@ -881,6 +922,7 @@ details-menu.details-menu:before {
     content: "";
     background-color: var(--color-backdrop);
 }
+.status-container details-menu.details-menu .details-menu-modal,
 details-menu.details-menu .details-menu-modal{
     position: relative;
     z-index: 99;
@@ -896,7 +938,9 @@ details-menu.details-menu .details-menu-modal{
     box-shadow: var(--dropdown-shadow);
     animation: details-menu-modal-animation 0.25s cubic-bezier(0,.1,.1,1) backwards;
 }
-
+.status-container details-menu.details-menu .details-menu-modal{
+    margin: auto;
+}
 details-menu.details-menu .details-menu-modal .details-menu-list{
     position: relative;
     padding: 0;
@@ -997,6 +1041,26 @@ details-menu.details-menu .details-menu-modal .details-menu-list{
     }
 }
 
+.status-container{
+    position: absolute;
+    bottom: 10%;
+    left: 80%;
+    z-index: 98;
+    width: 100%;
+    transition: width cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.25s;
+}
+.status-container details.new-details summary.btn{
+    border-radius: 20px;
+    padding: 0.25rem 0.45rem;
+}
+.status-container details.new-details summary.btn .user-status-text{
+    display: none;
+}
+.status-container details.new-details summary.btn:hover .user-status-text{
+    display: inline-block;
+}
+
+
 /* details menu animation */
 @keyframes details-menu-modal-animation{
     0% {
@@ -1014,26 +1078,31 @@ details-menu.details-menu .details-menu-modal .details-menu-list{
 main.app-main{
 
 }
-
+.sticky-container{
+    background-color: var(--color-scale-white);
+}
 .sticky-top-nav{
-    position: -webkit-sticky!important;
-    position: sticky!important;
-    top: 0!important;
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
     margin-top: 1.5rem !important;
-    z-index: 3;
+    z-index: 1999 !important;
+    background-color: var(--color-scale-white);
 }
 
 .app-nav-tab {
     display: flex;
-    flex-wrap: wrap;
     padding-left: 0;
     margin-bottom: 0;
-    list-style: none
+    list-style: none;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 .app-nav-item{
     display: block;
 }
 .app-nav-item .app-nav-link {
+    white-space: nowrap !important;
     display: block;
     padding: .5rem 1rem;
     font-size: 0.875rem;
@@ -1042,7 +1111,7 @@ main.app-main{
     transition: color .25s ease-in-out, background-color .25s ease-in-out, border-color .25s ease-in-out;
 }
 .app-nav-item .app-nav-link {
-    margin-bottom: -2px;
+    margin-bottom: -1px;
     border: 2px solid transparent;
 }
 .app-nav-item .app-nav-link:focus,
@@ -1067,8 +1136,6 @@ main.app-main{
 
 /* repo styles */
 .repo-language-color {
-    position: relative;
-    top: 1px;
     display: inline-block;
     width: 0.75rem;
     height: 0.75rem;
@@ -1191,6 +1258,36 @@ main.app-main{
     padding: 0.1875rem 0.75rem;
     font-size: 0.75rem;
     line-height: 1.25rem;
+}
+
+/* extra profile */
+.extra-profile{
+    opacity: 0;
+    transition: opacity 1s, border 1s;
+}
+
+/* Profile description style */
+.profile-description{
+    display: flex;
+    flex-direction: row;
+}
+.profile-description div:first-child{
+    margin-right: 1rem;
+}
+.user-location{
+    border-radius: 20%;
+}
+
+@media(min-width: 768px){
+    .profile-description{
+        flex-direction: column;
+    }
+    .profile-description div:first-child{
+        margin-right: 0rem;
+    }
+    /* .status-container{
+
+    } */
 }
 
 /*
