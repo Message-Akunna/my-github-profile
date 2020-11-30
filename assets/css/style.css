@@ -496,6 +496,13 @@ ul ol {
     color: var(--color-scale-gray-900);
     border-color: var(--color-scale-gray-200);
 }
+
+.badge{
+    border-radius: 0.6rem;
+    background-color: var(--color-scale-gray-200);
+    padding: 2px 6px;
+    font-size: 90%;
+}
 /* Avatar styles */
 
 .avatar{
@@ -1086,6 +1093,7 @@ details-menu.details-menu .details-menu-modal .details-menu-list{
     }
     .status-container details.new-details summary.btn .user-status-text{
         display: none;
+        transition: display cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.25s;
     }
     .status-container details.new-details summary.btn:hover .user-status-text{
         display: inline-block;
