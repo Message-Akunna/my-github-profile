@@ -1383,8 +1383,7 @@ main.app-main{
 
 footer.app-footer{
     border-top: 1px solid var(--color-scale-gray-200);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem;
     margin-top: 1rem;
 }
 
