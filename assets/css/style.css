@@ -205,6 +205,12 @@ ul ol {
 .fw-400{
     font-weight: 400 !important;
 }
+.fw-500{
+    font-weight: 500 !important;
+}
+.fw-600{
+    font-weight: 600 !important;
+}
 /* float */
 .float-right {
     float: right!important;
@@ -379,6 +385,10 @@ ul ol {
 .ml-1 {
     margin-left: .25rem!important
 }
+.mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+}
 /* padding */
 .pt-4{
     padding-top: 1.5rem !important;
@@ -389,6 +399,10 @@ ul ol {
 .py-1{
     padding-top: 0.25rem !important;
     padding-bottom: 0.25rem !important;
+}
+.py-2{
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
 }
 .py-3{
     padding-top: 1rem !important;
@@ -1366,6 +1380,17 @@ main.app-main{
 *    Footer style rules 
 *
 */
+
+footer.app-footer{
+    border-top: 1px solid var(--color-scale-gray-200);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+footer.app-footer>div{
+    max-width: 1204px;
+}
 
 /*
 *
