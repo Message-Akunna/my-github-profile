@@ -10,13 +10,44 @@
 </head>
 <body>
     <header class="app-header">
-        <nav class="app-navbar">
+        <nav class="app-navbar flex-wrap flex-md-nowrap">
             <div class="app-navbar-item mr-0">
-                <button class="app-navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarMenuItem" aria-label="Toggle navigation">
+                <button id="mobileMenuToggler" class="app-navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarMenuItem" aria-label="Toggle navigation">
                     <span class="icon-bar top-bar"></span>
                     <span class="icon-bar middle-bar"></span>
                     <span class="icon-bar bottom-bar"></span>
                 </button>
+            </div>
+            <!--  -->
+            <div id="mobileMenu" class="app-navbar-item d-flex flex-auto w-100 flex-column d-none d-md-none order-2 mr-0">
+                <div class="mobile-menu-item flex-auto mt-3 w-100">
+                    <form class="d-block" role="search">
+                        <div class="app-form-group">
+                            <input class="app-form-control" placeholder="Search or jump to..." type="text">
+                        </div>
+                    </form>
+                </div>
+                <nav class="d-flex flex-column flex-self-stretch">
+                    <a class="mobile-menu-link d-block" href="#">Dashboard</a>
+                    <a class="mobile-menu-link d-block" href="#">Pull requests</a>
+                    <a class="mobile-menu-link d-block" href="#">Issues</a>
+                    <a class="mobile-menu-link d-block" href="#">Marketplace</a>
+                    <a class="mobile-menu-link d-block" href="#">Explore</a>
+                    <a class="mobile-menu-link d-block" href="#">Settings</a>
+                    <a class="mobile-menu-link d-block " href="#">
+                        <div class="avatar avatar-xs d-inline-block">
+                            <img class="user-img" src="https://avatars1.githubusercontent.com/u/18660449?s=60&v=4" width="20" height="20" alt="Hello I am coming 's image">
+                        </div>
+                        <span class="user-name ml-1">On my way</span>
+                    </a>
+                    <a class="mobile-menu-link d-block" href="#">
+                        <svg class="octicon octicon-sign-out v-align-middle" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M2 2.75C2 1.784 2.784 1 3.75 1h2.5a.75.75 0 010 1.5h-2.5a.25.25 0 00-.25.25v10.5c0 .138.112.25.25.25h2.5a.75.75 0 010 1.5h-2.5A1.75 1.75 0 012 13.25V2.75zm10.44 4.5H6.75a.75.75 0 000 1.5h5.69l-1.97 1.97a.75.75 0 101.06 1.06l3.25-3.25a.75.75 0 000-1.06l-3.25-3.25a.75.75 0 10-1.06 1.06l1.97 1.97z">
+                            </path>
+                        </svg>
+                        <span class="ml-1">Sign out</span>
+                    </a>
+                </nav>
             </div>
             <!--  -->
             <div class="app-navbar-item header-logo-container d-none d-md-flex mr-0">
@@ -192,7 +223,7 @@
                     <div class="px-4 mt-md-n4 pt-4 profile-description">
                         <div class="d-flex flex-row flex-md-column">
                             <div id="profileAvatar">
-                                <div class="position-relative">
+                                <div class="position-relative mr-0 mb-2">
                                     <a href="" class="avatar avatar-xxxl position-relative d-block">
                                         <img alt="@Message-Akunna" width="200" height="auto" src="https://avatars1.githubusercontent.com/u/18660449?s=60&amp;v=4" class="user-img">
                                     </a>
@@ -420,8 +451,8 @@
                                     <div class="flex-grow-1">
                                         <div class="d-inline-block mb-1">
                                             <h3 class="">
-                                                <a href="http://" class="repo-name">233engineers</a>
-                                                <span class="label label--outline ml-1 mb-1">Private</span>
+                                                <a href="http://" class="repo-name">Building for the world</a>
+                                                <span class="label label--outline ml-1 mb-1">Personal</span>
                                             </h3>
                                         </div>
                                         <div class="">
@@ -431,8 +462,8 @@
                                         </div>
                                         <div class="f6 text-gray mt-2">
                                             <span class="ml-0 mr-3">
-                                                <span class="repo-language-color" style="background-color: #4F5D95"></span>
-                                                <span class="repo-programming-language">PHP</span>
+                                                <span class="repo-language-color" style="background-color: #FD34AC"></span>
+                                                <span class="repo-programming-language">Cobra</span>
                                             </span>
                                             <span class="mr-3">
                                                 <svg aria-label="star" class="octicon octicon-star" viewBox="0 0 16 16" version="1.1" width="16" height="16" role="img">

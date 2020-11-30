@@ -125,3 +125,10 @@ document.body.onscroll = function(event) {
         extraProfile.style.opacity = 1;
     }
 }
+
+// toggle mobile dropdown menu
+var mobileMenuToggler = document.querySelector("#mobileMenuToggler");
+
+mobileMenuToggler.onclick = function(){
+    document.querySelector("#mobileMenu").classList.toggle('d-none');
+}
