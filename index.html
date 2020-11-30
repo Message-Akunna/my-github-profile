@@ -128,7 +128,7 @@
                 <div class="app-col-12 order-2 order-md-1 sticky-container">
                     <div class="sticky-top-nav">
                         <div class="app-row mx-0 border-bottom">
-                            <div class="app-col-3">
+                            <div class="app-col-3 d-md-block d-none">
                                 <div id="extraProfile" class="extra-profile d-block px-4">
                                     <div class="d-flex flex-justify-start flex-align-center py-1">
                                         <img alt="@Message-Akunna" width="20" height="20" src="https://avatars1.githubusercontent.com/u/18660449?s=60&amp;v=4" class="avatar avatar-sm user-img">
@@ -190,43 +190,74 @@
                 </div>
                 <div class="app-col-3 order-1 order-md-2">
                     <div class="px-4 mt-md-n4 pt-4 profile-description">
-                        <div id="profileAvatar">
-                            <div class="position-relative">
-                                <a href="" class="avatar avatar-xxxl position-relative">
-                                    <img alt="@Message-Akunna" width="200" height="auto" src="https://avatars1.githubusercontent.com/u/18660449?s=60&amp;v=4" class="avatar avatar-sm user-img">
-                                </a>
-                                <div class="status-container">
-                                    <details class="new-details details-overlay mr-3">
-                                        <summary class="btn btn-default btn-sm">
-                                            <span class="user-status-emoji">🏠</span>
-                                            <span class="user-status-text">Working from home</span>
-                                        </summary>
-                                        <details-menu class="details-menu right-md-0" role="menu">
-                                            <div class="details-menu-modal">
-                                                <header class="details-menu-header">
-                                                    <span class="details-menu-title">Select type</span>
-                                                    <button class="details-menu-closeButton" type="button" data-toggle-for="type-options">
-                                                        <svg aria-label="Close menu" class="octicon octicon-x" viewBox="0 0 16 16" version="1.1" width="16" height="16" role="img">
-                                                            <path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z">
-                                                            </path>
-                                                        </svg>
-                                                    </button>
-                                                </header>
-                                                <div class="details-menu-card">
-                                                    
+                        <div class="d-flex flex-row flex-md-column">
+                            <div id="profileAvatar">
+                                <div class="position-relative">
+                                    <a href="" class="avatar avatar-xxxl position-relative d-block">
+                                        <img alt="@Message-Akunna" width="200" height="auto" src="https://avatars1.githubusercontent.com/u/18660449?s=60&amp;v=4" class="user-img">
+                                    </a>
+                                    <div class="status-container">
+                                        <details class="new-details details-overlay mr-3">
+                                            <summary class="btn btn-default btn-sm">
+                                                <span class="user-status-emoji">🏠</span>
+                                                <span class="user-status-text">Working from home</span>
+                                            </summary>
+                                            <details-menu class="details-menu right-md-0" role="menu">
+                                                <div class="details-menu-modal">
+                                                    <header class="details-menu-header">
+                                                        <span class="details-menu-title">Select type</span>
+                                                        <button class="details-menu-closeButton" type="button" data-toggle-for="type-options">
+                                                            <svg aria-label="Close menu" class="octicon octicon-x" viewBox="0 0 16 16" version="1.1" width="16" height="16" role="img">
+                                                                <path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z">
+                                                                </path>
+                                                            </svg>
+                                                        </button>
+                                                    </header>
+                                                    <div class="details-menu-card">
+                                                        
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </details-menu>
-                                    </details>
-                                    <span class="user-status">
-                                        
-                                    </span>
+                                            </details-menu>
+                                        </details>
+                                        <span class="user-status">
+                                            
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="mt-md-3">
+                                <h2 class="user-name">Message Akunna O.</h2>
+                                <p class="user-id f3 app-text-light fw-300">Message-Akunna</p>
+                            </div>
                         </div>
-                        <div class="mt-md-3">
-                            <h2 class="user-name">Message Akunna O.</h2>
-                            <p class="user-id f3 app-text-light fw-300">Message-Akunna</p>
+                        <div class="">    
+                            <div class="status-container full">
+                                <details class="new-details details-overlay mr-3 d-block">
+                                    <summary class="btn btn-default btn-sm d-block app-text-left">
+                                        <span class="user-status-emoji">🏠</span>
+                                        <span class="user-status-text">Working from home</span>
+                                    </summary>
+                                    <details-menu class="details-menu right-md-0" role="menu">
+                                        <div class="details-menu-modal">
+                                            <header class="details-menu-header">
+                                                <span class="details-menu-title">Select type</span>
+                                                <button class="details-menu-closeButton" type="button" data-toggle-for="type-options">
+                                                    <svg aria-label="Close menu" class="octicon octicon-x" viewBox="0 0 16 16" version="1.1" width="16" height="16" role="img">
+                                                        <path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z">
+                                                        </path>
+                                                    </svg>
+                                                </button>
+                                            </header>
+                                            <div class="details-menu-card">
+                                                
+                                            </div>
+                                        </div>
+                                    </details-menu>
+                                </details>
+                                <span class="user-status">
+                                    
+                                </span>
+                            </div>    
                             <p class="user-bio app-text-dark f4 fw-400">
                                 I am a software developer with a voracious appetite for reading, building, learning new kinds of stuff every day.
                             </p>
