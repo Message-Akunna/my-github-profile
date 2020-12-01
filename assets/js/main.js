@@ -11,8 +11,7 @@ window.onload = function(event) {
     let userStatus = document.querySelector('.user-status-text');
     let repoCount = document.querySelector('.repo-count');
 
-//     fetch(proxyurl+url)
-    fetch(url)
+    fetch(proxyurl+url)
     .then(response => response.json())
     .then(res => {
         userImgs.forEach((userImg) => {
