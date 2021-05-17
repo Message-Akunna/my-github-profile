@@ -68,8 +68,8 @@ window.onload = function(event) {
                             <span class="forked-repo-count">${repository.forks.totalCount}</span>
                         </span>
                         <span class="">
-                            Updated 
-                            <span class="relative-time">${repository.updatedAt}</span>
+                            Updated On
+                            <span class="relative-time">${timeFormat(repository.updatedAt)}</span>
                         </span>
                     </div>
                 </div>
@@ -132,3 +132,9 @@ var mobileMenuToggler = document.querySelector("#mobileMenuToggler");
 mobileMenuToggler.onclick = function(){
     document.querySelector("#mobileMenu").classList.toggle('d-none');
 }
+// time to human readable format
+function timeFormat(time){
+    const options = { year: "numeric", month: "long", day: "numeric" }
+    return new Date(dateString).toLocaleDateString(undefined, options)
+}
+
