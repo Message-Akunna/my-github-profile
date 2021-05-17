@@ -133,7 +133,7 @@ mobileMenuToggler.onclick = function(){
     document.querySelector("#mobileMenu").classList.toggle('d-none');
 }
 // time to human readable format
-function timeFormat(time){
+function timeFormat(dateString){
     const options = { year: "numeric", month: "long", day: "numeric" }
     return new Date(dateString).toLocaleDateString(undefined, options)
 }
