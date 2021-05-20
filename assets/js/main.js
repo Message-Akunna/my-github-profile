@@ -1,6 +1,7 @@
 // get data from github endpoint
 window.onload = function(event) {
-    const proxyurl = "https://cors-anywhere.herokuapp.com/";
+//     const proxyurl = "https://cors-anywhere.herokuapp.com/";
+    const proxyurl = "";
     const url = "https://my-github-profile.000webhostapp.com/access.php";
 
     let repositoryUi = "";
